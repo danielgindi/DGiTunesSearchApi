@@ -43,7 +43,7 @@
 
 - (id)initWithUrl:(NSURL *)url completion:(DGiTunesSearchApiRequestJsonResponseBlock)completionBlock error:(DGiTunesSearchApiRequestErrorBlock)errorBlock
 {
-    return [self initWithUrl:url cachePolicy:NSURLCacheStorageAllowed timeout:60 completion:completionBlock error:errorBlock];
+    return [self initWithUrl:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeout:60 completion:completionBlock error:errorBlock];
 }
 
 - (id)initWithUrl:(NSURL *)url cachePolicy:(NSURLRequestCachePolicy)cachePolicy completion:(DGiTunesSearchApiRequestJsonResponseBlock)completionBlock error:(DGiTunesSearchApiRequestErrorBlock)errorBlock
@@ -53,7 +53,7 @@
 
 - (id)initWithUrl:(NSURL *)url timeout:(NSTimeInterval)timeout completion:(DGiTunesSearchApiRequestJsonResponseBlock)completionBlock error:(DGiTunesSearchApiRequestErrorBlock)errorBlock
 {
-    return [self initWithUrl:url cachePolicy:NSURLCacheStorageAllowed timeout:timeout completion:completionBlock error:errorBlock];
+    return [self initWithUrl:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeout:timeout completion:completionBlock error:errorBlock];
 }
 
 - (id)initWithUrl:(NSURL *)url cachePolicy:(NSURLRequestCachePolicy)cachePolicy timeout:(NSTimeInterval)timeout completion:(DGiTunesSearchApiRequestJsonResponseBlock)completionBlock error:(DGiTunesSearchApiRequestErrorBlock)errorBlock
