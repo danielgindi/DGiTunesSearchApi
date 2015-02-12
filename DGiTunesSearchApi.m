@@ -79,7 +79,7 @@
     }
     [url appendFormat:@"&explicit=%@", includeExplicit ? @"YES" : @"NO"];
     
-    [DGiTunesSearchApiRequest requestWithUrl:[NSURL URLWithString:url] cachePolicy:NSURLCacheStorageAllowed timeout:6.0 completion:^(NSObject *response) {
+    [DGiTunesSearchApiRequest requestWithUrl:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeout:6.0 completion:^(NSObject *response) {
         
         BOOL isDictionary = [response isKindOfClass:NSDictionary.class];
         NSDictionary *dict = (NSDictionary *)response;
